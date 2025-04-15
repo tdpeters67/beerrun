@@ -1,37 +1,49 @@
 import { useState } from "react";
 import KegForm from "./KegForm";
+import kegMenu from "../assets/beerRunMenus/beerRunKegs.pdf";
 
-export default function RetailTile({ title, image, description }) {
+export default function KegTile({ title, image, description, link }) {
   const [kegForm, setKegForm] = useState(false);
 
   function handleChange() {
-    !kegForm ? setKegForm(true) : setKegForm(false);
+    setKegForm(!kegForm);
   }
-  return (
-    <div
-      className="w-[400px] h-fit  overflow-hidden [box-shadow:0px_0px_15px_-5px]  hover:[box-shadow:0px_0px_15px_0px] bg-white mb-5
 
-"
-    >
-      <div className="image-container ">
-        <img className="h-72 object-cover" src={image} alt={title} />
+  return (
+    <div className="w-[300px] md:w-[400px] bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden ">
+      <div className="relative">
+        <img className="h-72 w-full object-cover" src={image} alt={title} />
       </div>
-      <div className="m-4 mt-[.5rem]">
-        <div className="mb-2">
-          <h3 className="m-0 p-0 font-bold ">{title}</h3>
+      <div className="p-4">
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-gray-700 mb-4">
+          {description}
+          <a
+            className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            href={kegMenu}
+          >
+            {" "}
+            Click here for a list of available kegs.
+          </a>
+        </p>
+        <div className="flex flex-col items-center">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              className="mb-2 inline-block px-4 py-2 bg-gray-800 text-white rounded-lg shadow hover:bg-green-600 transition-colors"
+            >
+              See Our Current Selection
+            </a>
+          )}
+          <button
+            className="px-4 py-2 bg-backgroundColor text-white rounded-lg shadow hover:bg-brightColor transition-colors"
+            onClick={handleChange}
+          >
+            {kegForm ? "Close Order Form" : "Submit an Order"}
+          </button>
+          {kegForm && <KegForm handleChange={handleChange} />}
         </div>
-        <div className="description">
-          <p className="m-0 p-0">{description}</p>
-        </div>
-      </div>
-      <div className="flex flex-col justify-center">
-        <button
-          className="p-2 mb-2 bg-white border-[none] [transition:.2s] hover:to-backgroundColor "
-          onClick={handleChange}
-        >
-          {kegForm ? <p /> : <p>Submit an Order</p>}
-        </button>
-        {kegForm ? <KegForm handleChange={handleChange} /> : <p></p>}
       </div>
     </div>
   );

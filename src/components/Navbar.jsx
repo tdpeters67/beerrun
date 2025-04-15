@@ -5,6 +5,11 @@ import { FiChevronDown } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { useState } from "react";
 import logo from "../assets/brlogo.jpg";
+import beverageMenu from "../assets/beerRunMenus/beverageMenu.pdf";
+import lunchMenu from "../assets/beerRunMenus/lunchMenu.pdf";
+import dinnerMenu from "../assets/beerRunMenus/dinnerMenu.pdf";
+import tacoMenu from "../assets/beerRunMenus/tacoMenu.pdf";
+import brunchMenu from "../assets/beerRunMenus/brunchMenu.pdf";
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -47,70 +52,22 @@ export default function Navbar() {
               </div>
               <ul className=" absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Lunch
-                  </Link>
+                  <a href={lunchMenu}>Lunch</a>
                 </li>
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Dinner
-                  </Link>
+                  <a href={dinnerMenu}>Dinner</a>
                 </li>
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Beer
-                  </Link>
+                  <a href="https://untappd.com/v/beer-run/14799">Beer</a>
                 </li>
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Brunch
-                  </Link>
+                  <a href={brunchMenu}>Brunch</a>
                 </li>
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Breakfast Tacos
-                  </Link>
+                  <a href={tacoMenu}>Breakfast Tacos</a>
                 </li>
                 <li>
-                  <Link
-                    to="menus"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    className=" hover:text-brightColor transition-all cursor-pointer"
-                  >
-                    Wine and Cocktails
-                  </Link>
+                  <a href={beverageMenu}>Other Beverages</a>
                 </li>
               </ul>
             </div>
@@ -141,7 +98,7 @@ export default function Navbar() {
             >
               About Us
             </Link>
-            <Link
+            {/* <Link
               to="reviews"
               spy={true}
               smooth={true}
@@ -149,7 +106,7 @@ export default function Navbar() {
               className=" hover:text-brightColor transition-all cursor-pointer"
             >
               Reviews
-            </Link>
+            </Link> */}
             <Link
               to="order"
               spy={true}
@@ -230,19 +187,9 @@ export default function Navbar() {
             duration={500}
             className=" hover:text-brightColor transition-all cursor-pointer"
             onClick={closeNav}
-          >
-            Reviews
-          </Link>
-          <Link
-            to="order"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className=" hover:text-brightColor transition-all cursor-pointer"
-            onClick={closeNav}
-          >
-            <Button title="Order Now" />
-          </Link>
+          />
+
+          <Button title="Order Now" />
         </div>
       </div>
     </div>

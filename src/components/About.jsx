@@ -1,47 +1,72 @@
 import beerrun1 from "../assets/beerrun1.jpg";
-import theteam from "../assets/theteam.jpg";
+import chef from "../assets/chef.jpg";
+import maryann from "../assets/maryann.avif";
 
 export default function About() {
   return (
-    <div className=" min-h-screen  bg-greyColor text-white py-20 ">
-      <div className=" flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5 gap-5">
-        <img className="pt-10 w-[50%]" src={beerrun1} alt="john" />
-        <div className="space-y-4 lg:pt-14">
-          <h1 className="font-semibold text-4xl text-center md:text-start">
-            17 years!
+    <div className="min-h-screen bg-gray-800 text-white  py-20 px-6">
+      <div className="container  flex flex-col lg:flex-row justify-center items-center  gap-5 px-5 lg:px-32">
+        <img
+          className="w-full lg:w-1/2 rounded-xl shadow-lg"
+          src={beerrun1}
+          alt="Beer Run"
+        />
+        <div className="space-y-6 lg:pl-10">
+          <h1 className="text-4xl font-bold text-center lg:text-left text-white">
+            17 Years of Excellence
           </h1>
-          <p>
+          <p className="text-lg leading-relaxed text-white">
             Beer Run is the quintessential downtown Charlottesville family
-            restaurant. Family owned and operated, Beer Run was founded in
-            December 2007. Beer Run is located on the edge of the Belmont and
-            Woolen Mills neighborhoods, and serves countless families every
-            week. Step-brothers Josh Hunt and John Woodriff, with the
-            encouragement of their parents, wanted to open a retail craft beer
-            and wine store. That idea blossomed into not only Charlottesville’s
-            most extensive craft beer bottle store but one of Draft Magazine’s
-            America’s 100 Best Beer Bars 2014 and 2015. Beer Run is a craft beer
-            bottle and wine shop, restaurant, and bar all wrapped up in one. It
-            is kid friendly, pet friendly, and an overall great neighborhood
-            hangout. The food menu is carefully planned to maximize seasonal,
-            locally sourced and organic ingredients. Looking for more seating
-            and venue space for holiday parties? Visit Beer Run’s second
-            Charlottesville venture, Kardinal Beer Hall and Garden at 722
-            Preston Ave!
+            restaurant. Founded in 2007, it has grown into one of America&apos;s
+            top 100 beer bars. With a focus on locally sourced, seasonal
+            ingredients, Beer Run is more than just a craft beer store—it&apos;s
+            a community hub for food lovers and beer enthusiasts alike.
           </p>
         </div>
       </div>
-      <div className="  text-white flex flex-col lg:flex-row justify-center items-center lg:px-32 px-5 gap-5">
-        <div className="space-y-4 lg:pt-14">
-          <h1 className="font-semibold text-4xl text-center md:text-start">
-            Now!
+
+      <div className="container mx-auto  flex  flex-col-reverse lg:flex-row justify-center items-center py-4 gap-10 mt-16 px-5 lg:px-32">
+        <div className="space-y-6 lg:pr-10">
+          <h1 className="text-4xl font-bold text-center lg:text-left text-white">
+            Chef Laura Fonner
           </h1>
-          <p>
-            Our Staff is lovingly committed to doing a bunch of nice things for
-            guests! They want to serve you sooo bad! Anything you need, we can
-            handle it!
+          <p className="text-lg leading-relaxed text-white">
+            Chef Laura Fonner stands as a culinary beacon in Charlottesville,
+            renowned for her dynamic career and unwavering commitment to the
+            local community. After a culinary journey spanning over two decades,
+            she has now joined the ranks here at Beer Run, elevating our menu
+            with her signature relaxed decadence.
           </p>
         </div>
-        <img className="pt-10 w-[50%]" src={theteam} alt="john" />
+        <img
+          className="w-full lg:w-1/2 rounded-xl shadow-lg"
+          src={chef}
+          alt="Our Team"
+        />
+      </div>
+      <div className="container mx-auto flex flex-col lg:flex-row justify-center items-center gap-10 mt-16 px-5 lg:px-32">
+        <img
+          className="w-full lg:w-1/2 rounded-xl shadow-lg"
+          src={maryann}
+          alt="Beer Run"
+        />
+        <div className="space-y-6 lg:pl-10">
+          <h1 className="text-4xl font-bold text-center lg:text-left text-white">
+            Mary Ann Parr
+          </h1>
+          <p className="text-lg leading-relaxed text-white">
+            {" "}
+            Mary Ann Parr is a notable figure in Charlottesville, Virginia,
+            recognized for her entrepreneurial spirit and significant
+            contributions to the local hospitality and culinary scenes.
+            Throughout her diverse endeavors (The Virginian, Rococo&apos;s,
+            Guesthouses in the Clouds), Mary Ann Parr has consistently
+            demonstrated a commitment to fostering community and enhancing
+            Charlottesville&apos;s hospitality landscape. Her legacy is evident
+            in the thriving establishments she has nurtured and the vibrant
+            culinary culture she has helped cultivate.
+          </p>
+        </div>
       </div>
     </div>
   );

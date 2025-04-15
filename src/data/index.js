@@ -1,49 +1,56 @@
-import foodsplash1 from "../assets/SplashImages/foodsplash1.jpg";
-import foodsplash2 from "../assets/SplashImages/foodsplash2.jpg";
-import foodsplash3 from "../assets/SplashImages/foodsplash3.jpg";
-
-import eventsplash1 from "../assets/SplashImages/eventsplash1.jpg";
-import eventsplash2 from "../assets/SplashImages/eventsplash2.jpg";
-import eventsplash3 from "../assets/SplashImages/eventsplash3.jpg";
+import gallery1 from "../assets/firstGallery/gallery1.jpg";
+import gallery2 from "../assets/firstGallery/gallery2.jpg";
+import gallery3 from "../assets/firstGallery/gallery3.jpg";
+import gallery4 from "../assets/firstGallery/gallery4.jpg";
+import gallery5 from "../assets/firstGallery/gallery5.jpg";
+import gallery6 from "../assets/secondGallery/gallery6.jpg";
+import gallery7 from "../assets/secondGallery/gallery7.jpg";
+import gallery8 from "../assets/secondGallery/gallery8.jpg";
+import gallery9 from "../assets/secondGallery/gallery9.jpg";
+import gallery10 from "../assets/secondGallery/gallery10.jpg";
 
 export const FirstSplash = [
   {
-    src: foodsplash1,
-    alt: "food",
+    src: gallery1,
+    alt: "gallery1",
   },
   {
-    src: foodsplash2,
-    alt: "food",
+    src: gallery2,
+    alt: "gallery2",
   },
   {
-    src: foodsplash3,
-    alt: "food",
+    src: gallery3,
+    alt: "gallery3",
   },
   {
-    src: eventsplash1,
-    alt: "event",
+    src: gallery4,
+    alt: "gallery4",
   },
   {
-    src: eventsplash2,
-    alt: "event",
-  },
-  {
-    src: eventsplash3,
-    alt: "event",
+    src: gallery5,
+    alt: "gallery5",
   },
 ];
 
 export const SecondSplash = [
   {
-    src: eventsplash1,
-    alt: "event",
+    src: gallery6,
+    alt: "gallery6",
   },
   {
-    src: eventsplash2,
-    alt: "event",
+    src: gallery7,
+    alt: "gallery7",
   },
   {
-    src: eventsplash3,
-    alt: "event",
+    src: gallery8,
+    alt: "gallery8",
+  },
+  {
+    src: gallery9,
+    alt: "gallery9",
+  },
+  {
+    src: gallery10,
+    alt: "gallery10",
   },
 ];

@@ -4,7 +4,7 @@ import Menus from "./components/Menus";
 import Retail from "./components/Retail";
 import ImageSplash from "./components/ImageSplash";
 import About from "./components/About";
-import Reviews from "./components/Reviews";
+// import Reviews from "./components/Reviews";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
 import { FirstSplash, SecondSplash } from "./data/index.js";
@@ -36,9 +36,9 @@ function App() {
         <div id="about">
           <About />
         </div>
-        <div id="reviews">
+        {/* <div id="reviews">
           <Reviews />
-        </div>
+        </div> */}
       </main>
       <Footer />
     </>
